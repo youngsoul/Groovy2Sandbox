@@ -27,7 +27,7 @@ while (true) {
       w.writeLine("<html><body><h1>Done with test</h1></body></html>")
       w.flush()
       Thread.sleep(3000)
-      socket.close()
+
     }
 
   }
