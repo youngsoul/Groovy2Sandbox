@@ -10,6 +10,8 @@ ServerSocket serverSocket = new ServerSocket(2575,5)
 
 while (true) {
   serverSocket.accept { Socket socket ->
+    // This is running in a new thread and the number of threads is limited by the backlog parameter in
+    // ServerSocket constructor
     socket.withStreams { input, output ->
       println Thread.currentThread().name
 
